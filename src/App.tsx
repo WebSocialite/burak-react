@@ -9,6 +9,9 @@ import { UserPage } from './app/screens/userPage';
 import { OtherNavbar } from './app/components/headers/OtherNavbar';
 import { HomeNavbar } from './app/components/headers/HomeNavbar';
 import { Footer } from './app/components/footer';
+import "../src/css/app.css";
+import "../src/css/navbar.css";
+import { HelpPage } from './app/screens/helpPage';
 
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
       </Route>
       <Route path="/members-page">
         <UserPage />
+      </Route>
+      <Route path="/help">
+        <HelpPage />
       </Route>
       <Route path="/">
         <HomePage />
