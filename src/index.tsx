@@ -10,7 +10,7 @@ import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom";
 import './css/index.css';
 
-ReactDOM.render(               // first argument
+ReactDOM.render(               // first argument  VIRTUAL DOM
   <React.StrictMode>
     <Provider store={store}>  
     <ThemeProvider theme={theme}> 
@@ -22,7 +22,7 @@ ReactDOM.render(               // first argument
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
-document.getElementById('root')     //second argument
+document.getElementById('root')     //second argument   REAL DOM
 );
 
 // If you want to start measuring performance in your app, pass a function
