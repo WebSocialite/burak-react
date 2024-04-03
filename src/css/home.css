@@ -266,7 +266,8 @@
 }
 
 .homepage .active-users-frame .category-title {
-  margin-top: 93px;
+  font-family: "Dancing Script";
+  margin-top: 73px;
   font-size: 36px;
   font-weight: 600;
   line-height: 34px;
@@ -311,10 +312,14 @@
   .homepage .events-frame .category-title {
     font-family: "Dancing Script";
     font-style: normal;
-    font-weight: 700;
     font-size: 36px;
     line-height: 43px;
     padding-top: 20px;
+    margin-top: 73px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #343434;
   }
   
   .homepage .events-frame .events-main {
@@ -329,6 +334,7 @@
   .homepage .events-frame .events-main .events-text {
     width: auto;
     height: 70px;
+    margin-top: 40px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
