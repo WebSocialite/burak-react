@@ -43,29 +43,54 @@ export default function OrdersPage() {
              </Stack>
           </TabContext>
         </Stack>
+
+
         <Stack className={"order-right"}>
           <Box className={"order-info-box"}>
-          <Box className={"member-box"}>
-            <div className={"order-user-img"}>
-              <img src="/icons/default-user.svg"
-              className="order-user-avatar"/>
-            
-            <div className="order-user-icon-box">
-              <img 
-              src="/icons/user-badge.svg"
-              className="order-user-prof-img"/>
-            </div>
-            </div>
-            <span className="order-user-name"></span>
-            <span className="order-user-prof"></span>
+            <Box className={"member-box"}>
+              <div className={"order-user-img"}>
+                <img alt='' src={"/img/justin.webp"} className={"order-user-avatar"} />
+                <div className={"order-user-icon-box"}>
+                  <img alt='' src={"/icons/user-badge.svg"} className={"order-user-prof-img"} />
+                </div>
+              </div>
+              <span className={"order-user-name"}>Bob</span>
+              <span className={"order-user-prof"}>User</span>
+            </Box>
+            <Box className={"liner"}></Box>
+            <Box className={"order-user-address"}>
+              <div style={{ display: "flex" }}>
+              </div>
+              <div className={"spec-address-txt"}>Do not exist</div>
+            </Box>
           </Box>
-          <Box className="liner"></Box>
-
-
+          <Box className={"order-info-box"} sx={{ mt: "15px" }}>
+            <input
+              type={"text"}
+              name={"cardNumber"}
+              placeholder={"Card number : **** 7777 7777 7777"}
+              className={"card-input"}
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <input type={"text"} name={"cardPeriod"} placeholder={"07 / 24"} className={"card-half-input"} />
+              <input type={"text"} name={"cardCVV"} placeholder={"CVV : 010"} className={"card-half-input"} />
+            </div>
+            <input type={"text"} name={"cardCreator"} placeholder={"Justin Gaejhe"} className={"card-input"} />
+            <div className={"cards-box"}>
+              <img alt='' src={"/icons/western-card.svg"} />
+              <img alt='' src={"/icons/master-card.svg"} />
+              <img alt='' src={"/icons/paypal-card.svg"} />
+              <img alt='' src={"/icons/visa-card.svg"} />
+            </div>
           </Box>
         </Stack>
-
       </Container>
     </div>
   );
-  }
+}

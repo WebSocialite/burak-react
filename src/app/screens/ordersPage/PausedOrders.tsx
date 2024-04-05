@@ -2,7 +2,6 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import Button from "@mui/material/Button";
 import TabPanel from "@mui/lab/TabPanel";
-import moment from "moment";
 
 
 
@@ -11,7 +10,7 @@ export default function PausedOrders() {
     return (
     <TabPanel value={"1"}>
          <Stack>
-            {[1, 2].map((ele, index) => {     //order ni soni
+            {[1, 2, 3].map((ele, index) => {     //order ni soni
                 return (
                     <Box key={index} className={"order-main-box"}>
                         <Box className={"order-box-scroll"}>
@@ -43,10 +42,12 @@ export default function PausedOrders() {
                                 <p>Total</p>
                                 <p>$24</p>
                             </Box>
-                            <p className="data-compl">
-                                {moment().format("YY-MM-DD HH:mm")}
-                            </p>
-                            <Button variant="contained" className="verify-button">Verify to Fullfill</Button>
+                            <Button variant='contained' color='secondary' className={"cancel-button"}>
+                             Cancel
+                            </Button>
+                            <Button variant='contained' className={"pay-button"}>
+                             Pay
+                            </Button>
                           </Box>
                           </Box>
                 );

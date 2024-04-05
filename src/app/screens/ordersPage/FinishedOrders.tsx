@@ -2,16 +2,15 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import Button from "@mui/material/Button";
 import TabPanel from "@mui/lab/TabPanel";
-import moment from "moment";
 
 
 
 
 export default function FinishedOrders() {
     return (
-    <TabPanel value={"1"}>
+    <TabPanel value={"3"}>
          <Stack>
-            {[1, 2].map((ele, index) => {     //order ni soni
+            {[1, 2, 3].map((ele, index) => {     //order ni soni
                 return (
                     <Box key={index} className={"order-main-box"}>
                         <Box className={"order-box-scroll"}>
@@ -26,7 +25,7 @@ export default function FinishedOrders() {
                                     <Box className={"price-box"}>
                                         <p>$12</p>
                                         <img src={"/icons/close.svg"} />
-                                        <p>2</p>
+                                        <p>$2</p>
                                         <img src={"/icons/pause.svg"} />
                                         <p style={{ marginLeft: "15px"}}>$24</p>
                                     </Box>
@@ -41,22 +40,16 @@ export default function FinishedOrders() {
                                 <img src="/icons/plus.svg" style={{marginLeft: "20px"}} />
                                 <p>Delivery cost</p>
                                 <p>$2</p>
-                                <img 
-                                   src="/icons/pause.svg"
-                                   style={{ marginLeft: "20px" }}/>
+                                <img src="/icons/pause.svg" style={{ marginLeft: "20px" }}/>
                                 <p>Total</p>
                                 <p>$26</p>
                             </Box>
-                            <p className="data-compl">
-                                {moment().format("YY-MM-DD HH:mm")}
-                            </p>
-                            <Button variant="contained" className="verify-button">Verify to Fullfill</Button>
-                          </Box>
+                            </Box>
                           </Box>
                 );
             })}
 
-    {true && ( //agar bunga true bersak PAUSED ORDERSDA no-image-list PAYDO BOLADI
+    {false && ( //agar bunga true bersak PAUSED ORDERSDA no-image-list PAYDO BOLADI
                 <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
                     <img 
                     src="/icons/noimage-list.svg"
