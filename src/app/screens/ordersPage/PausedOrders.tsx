@@ -32,8 +32,7 @@ export default function PausedOrders() {
                                     </Box>
                                     );
                             })} 
-                          </Box>
-                          <Box className={"total-price-box"}>
+                             <Box className={"total-price-box"}>
                             <Box className={"box-total"}>
                                 <p>Products price</p>
                                 <p>$22</p> 
@@ -52,6 +51,8 @@ export default function PausedOrders() {
                              Pay
                             </Button>
                           </Box>
+                          </Box>
+                         
                           </Box>
                 );
             })}

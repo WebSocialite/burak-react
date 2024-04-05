@@ -151,7 +151,7 @@
 }
 
 
-
+/**   OTHER NAVBAR   **/
 
 
 
@@ -173,7 +173,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-     align-items: center;
+    align-items: center;
+    font-family: "Poppins";
+    margin-top: 30px;
+    font-size: 20px;
 }
 
 .other-navbar .navbar-container .menu .brand-logo {

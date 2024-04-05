@@ -3,7 +3,6 @@ import { Container, Stack, Box } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
-import LocationOnIcon from "@mui/icons-material/locationOn";
 import PausedOrders from "./PausedOrders";
 import ProcessOrders from "./PausedOrders";
 import FinishedOrders from "./FinishedOrders";
@@ -61,7 +60,7 @@ export default function OrdersPage() {
             <Box className={"order-user-address"}>
               <div style={{ display: "flex" }}>
               </div>
-              <div className={"spec-address-txt"}>Do not exist</div>
+              <div className={"spec-address-txt"}>Yeosu, South Korea</div>
             </Box>
           </Box>
           <Box className={"order-info-box"} sx={{ mt: "15px" }}>
