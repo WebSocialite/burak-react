@@ -36,8 +36,8 @@
 }
 
 .products-page .products .top-text p {
-    position: relative;
-    margin-left: 380px;
+    position: absolute;
+    margin-left: 40%;
     font-family: "Dancing Script";
     font-style: normal;
     font-weight: 700;
@@ -395,6 +395,23 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 43px;
+}
+
+/** ADRESS styling **/
+
+.products-page .address .title {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 45%;
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: #f8f8ff;
+    flex-direction: column;
 }
 
 /** ChosenProduct **/
