@@ -182,7 +182,7 @@
     justify-content: space-between;
 }
 
-.order-page .order-main-content {
+.order-page .order-main-context {
     width: 855px;
     height: auto;
 }
@@ -191,7 +191,7 @@
     padding-top: 24px;
 }
 
-.order-page .order-main-content .order-main-box {
+.order-page .order-main-context .order-main-box {
     position: relative;
     width: 100%;
     max-height: 285px;
@@ -201,7 +201,13 @@
     border-radius: 16px;
 }  
 
-.order-page .order-main-content .order-main-box .order-box-scroll {
+.order-page .order-main-context .order-main-box .order {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.order-page .order-main-context .order-main-box .order-box-scroll {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -214,11 +220,11 @@
     overflow-y: scroll;
 }
 
-.order-page .order-main-content .order-main-box .order-box-scroll::-webkit-scrollbar {
+.order-page .order-main-context .order-main-box .order-box-scroll::-webkit-scrollbar {
     width: 7px;
 }
 
-.order-page .order-main-content .order-main-box .order-box-scroll::-webkit-scrollbar-thumb {
+.order-page .order-main-context .order-main-box .order-box-scroll::-webkit-scrollbar-thumb {
     background-color: #8989db;
     border-radius: 5px;
 }
@@ -231,6 +237,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .order-page .order-box-scroll .orders-name-price .order-dish-img {
@@ -274,7 +281,7 @@
     color: #262626;
 }
 
-.order-page .order-main-content .orders-main-box .total-price-box {
+.order-page .order-main-context .order-main-box .total-price-box {
     position: relative;
     width: 100%;
     height: 41px;
@@ -288,13 +295,13 @@
     overflow: hidden;
 }
 
-.order-page .order-main-content .total-price-box .cancel-button {
+.order-page .order-main-context .total-price-box .cancel-button {
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     max-height: 40px;
 }
 
-.order-page .order-main-content .total-price-box .pay-button {
+.order-page .order-main-context .total-price-box .pay-button {
     background: #56b74d;
     color: #f8f8ff;
     border-radius: 10px;
@@ -302,14 +309,14 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.order-page .order-main-content .total-price-box .verify-button {
+.order-page .order-main-context .total-price-box .verify-button {
     background: #0288d1;
     color: #f8f8ff;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.order-page .order-main-content .order-main-box .total-price-box .box-total {
+.order-page .order-main-context .order-main-box .total-price-box .box-total {
     position: relative;
     max-width: 535px;
     height: 100%;
@@ -337,3 +344,4 @@
     line-height: 36px;
     color:#000000;
 }
+
