@@ -32,7 +32,7 @@ export default function FinishedOrders() {
                                     </Box>
                                     );
                             })} 
-                          </Box>
+                         
                           <Box className={"total-price-box"}>
                             <Box className={"box-total"}>
                                 <p>Product price</p>
@@ -45,6 +45,7 @@ export default function FinishedOrders() {
                                 <p>$26</p>
                             </Box>
                             </Box>
+                          </Box>
                           </Box>
                 );
             })}

@@ -33,7 +33,7 @@ export default function ProcessOrders() {
                                     </Box>
                                     );
                             })} 
-                          </Box>
+                          
                           <Box className={"total-price-box"}>
                             <Box className={"box-total"}>
                                 <p>Products price</p>
@@ -50,7 +50,8 @@ export default function ProcessOrders() {
                             </p>
                             <Button variant="contained" className="verify-button">Verify to Fulfill</Button>
                           </Box>
-                          </Box>
+                        </Box>
+                    </Box>
                 );
             })}
 

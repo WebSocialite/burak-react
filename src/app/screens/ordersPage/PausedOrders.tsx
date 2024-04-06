@@ -27,23 +27,25 @@ export default function PausedOrders() {
                                         <img src={"/icons/close.svg"} />
                                         <p>2</p>
                                         <img src={"/icons/pause.svg"} />
-                                        <p style={{ marginLeft: "15px"}}>$24</p>
+                                        <p style={{ marginLeft: "15px"}}>$18</p>
                                     </Box>
+                                    
                                     </Box>
-                                    );
+                                    
+                                    );       
                             })} 
-                          </Box>
+                          
                           <Box className={"total-price-box"}>
                             <Box className={"box-total"}>
                                 <p>Products price</p>
-                                <p>$22</p> 
+                                <p>$18</p> 
                                 <img src="/icons/plus.svg"  style={{ marginLeft: "20px" }}/>
                                 <p>Delivery cost</p>
                                 <p>$2</p>
                                 <img src="/icons/pause.svg"
                                 style={{ marginLeft: "20px" }}/>
                                 <p>Total</p>
-                                <p>$24</p>
+                                <p>$20</p>
                             </Box>
                             <Button variant='contained' color='secondary' className={"cancel-button"}>
                              Cancel
@@ -53,6 +55,7 @@ export default function PausedOrders() {
                             </Button>
                           </Box>
                           </Box>
+                     </Box>  
                 );
             })}
 
