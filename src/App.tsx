@@ -13,7 +13,6 @@ import HelpPage from './app/screens/helpPage';
 import "../src/css/app.css";
 import "../src/css/navbar.css";
 import "../src/css/footer.css";
-import Test from './app/screens/Test';
 
 
 
@@ -37,8 +36,7 @@ function App() {
         <HelpPage />
       </Route>
       <Route path="/">
-        <Test />
-        {/* <HomePage /> */}
+        <HomePage /> 
       </Route>
     </Switch>
     <Footer />
