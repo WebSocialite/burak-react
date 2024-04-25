@@ -26,11 +26,11 @@ const actionDispatch = (dispatch: Dispatch) => ({ //SLICE
 export default function HomePage() {
   const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(useDispatch());  // redux storagemizga yukalandigan function
       // Selector: Store => Data  
-  
+  console.log(process.env.REACT_APP_API_URL);
     useEffect(() => {
     // BackEnd server data fetch(request) => DATA
       const product = new ProductService();
-      product
+      product        // product object ga getProduct methodini biriktirib unda pasdagilarni buyurayapmiz
       .getProducts({
         page: 1,
         limit: 4,
@@ -38,6 +38,7 @@ export default function HomePage() {
         productCollection: ProductCollection.DISH
       })
       .then(data => {
+        console.log("DATA PASSED HERE===>", data);
         setPopularDishes(data);
       })
       .catch((err) => console.log(err));

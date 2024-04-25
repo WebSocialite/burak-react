@@ -27,6 +27,7 @@ export default function ActiveUsers() {
                     {topUsers.length !== 0 ? (
                         topUsers.map((member: Member) => {
                             const imagePath = `${serverApi}/${member.memberImage}`;
+                            console.log('--------', member);
                             return (
                                 <Card 
                                  key={member._id}
