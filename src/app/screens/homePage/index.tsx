@@ -35,8 +35,7 @@ export default function HomePage() {
         page: 1,
         limit: 4,
         order: "productViews",
-        productCollection: ProductCollection.DISH,
-        length: 0
+        productCollection: ProductCollection.DISH
       })
       .then(data => {
         console.log("DATA PASSED HERE===>", data);
@@ -48,8 +47,7 @@ export default function HomePage() {
       .getProducts({
         page: 1,
         limit: 4,
-        order: "createdAt",
-        length: 0
+        order: "createdAt"
       })
       .then(data => {
         setNewDishes(data);

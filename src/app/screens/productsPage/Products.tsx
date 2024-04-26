@@ -38,8 +38,6 @@ export default function Products() {
     order: "createdAt",
     productCollection: ProductCollection.DISH,
     search: "",
-    length: 0     ///CHCHCHCHCHCHEEEEECKCKCKCKCK
-  
   });
   const [searchText, setSearchText] = useState<string>("");
   const history = useHistory();            // react router dom Hook
@@ -232,7 +230,7 @@ export default function Products() {
                  <Stack className={"pagination-section"}>
                     <Pagination 
                     count={
-                      productSearch.length !== 0
+                      products.length !== 0
                        ? productSearch.page + 1 
                        : productSearch.page
                       }
