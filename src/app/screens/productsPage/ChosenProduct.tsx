@@ -21,6 +21,7 @@ import ProductService from "../../services/ProductService";
 import MemberService from "../../services/MemberService";
 import { Member } from "../../../lib/types/member";
 import { serverApi } from "../../../lib/config";
+import { CartItem } from "../../../lib/types/search";
 
 const actionDispatch = (dispatch: Dispatch) => ({ //SLICE
   setRestaurant: (data: Member) => dispatch(setRestaurant(data)),
@@ -35,7 +36,13 @@ const restaurantRetriever = createSelector(retrieveRestaurant, (restaurant) => (
  })
 );
 
-export default function ChosenProduct() {
+interface ChosenProductsProps {
+  onAdd: (item: CartItem) => void;
+}
+
+
+export default function ChosenProduct(props: ChosenProductsProps) {
+  const { onAdd } = props;
   const {productId} = useParams<{ productId: string }>();
   const {setRestaurant, setChosenProduct} = actionDispatch(useDispatch);
   const { chosenProduct} = useSelector(chosenProductRetriever);
