@@ -18,6 +18,7 @@ export interface Product {
 }
 
 export interface ProductInquiry {
+    length: number;
     order: string;
     page: number;
     limit: number;
