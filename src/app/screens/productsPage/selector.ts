@@ -13,7 +13,7 @@ export const retrieveChosenProduct = createSelector(
     (ProductsPage) => ProductsPage.chosenProduct
 );
 
-export const retrieveTopUsers = createSelector(
+export const retrieveProducts = createSelector(
     selectProductsPage, 
     (ProductsPage) => ProductsPage.products
 );
