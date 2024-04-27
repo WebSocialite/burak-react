@@ -106,10 +106,23 @@ useEffect(() => {
             <Divider height="1" width="100%" bg="#000000" />
             <div className={"product-price"}>
               <span>Price:</span>
-              <span>${chosenProduct?.productPrice}</span>
+              <span>${chosenProduct?.productPrice }</span>
             </div>
             <div className={"button-box"}>
-              <Button variant="contained">Add To Basket</Button>
+              <Button variant="contained"
+              onClick={(e) => {
+                console.log("Button pressed!");
+                onAdd({
+                  _id: chosenProduct._id,
+                  quantity: 1,
+                  name: chosenProduct.productName,
+                  price: chosenProduct.productPrice,
+                  image: chosenProduct.productImages[0],
+                  
+                });
+                e.stopPropagation();
+              }}
+              >Add To Basket</Button>
             </div>
           </Box>
         </Stack>

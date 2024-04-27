@@ -38,7 +38,6 @@ export default function HomePage() {
         productCollection: ProductCollection.DISH
       })
       .then(data => {
-        console.log("DATA PASSED HERE===>", data);
         setPopularDishes(data);
       })
       .catch((err) => console.log(err));
