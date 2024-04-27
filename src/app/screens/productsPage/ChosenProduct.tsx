@@ -111,7 +111,6 @@ useEffect(() => {
             <div className={"button-box"}>
               <Button variant="contained"
               onClick={(e) => {
-                console.log("Button pressed!");
                 onAdd({
                   _id: chosenProduct._id,
                   quantity: 1,
