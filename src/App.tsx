@@ -11,29 +11,28 @@ import  HomeNavbar from './app/components/headers/HomeNavbar';
 import Footer from './app/components/footer';
 import HelpPage from './app/screens/helpPage';
 import useBasket from './app/hooks/useBasket';
-import "../src/css/app.css";
-import "../src/css/navbar.css";
-import "../src/css/footer.css";
 import AuthenticationModal from './app/components/auth';
 import MemberService from './app/services/MemberService';
 import { sweetErrorHandling, sweetTopSuccessAlert } from './lib/sweetAlert';
 import { Messages } from './lib/config';
 import { T } from './lib/types/common';
 import { useGlobals } from './app/hooks/useGlobals';
-
+import "../src/css/app.css";
+import "../src/css/navbar.css";
+import "../src/css/footer.css";
 
 
 function App() {
   const location = useLocation();  // hook
   const {setAuthMember} = useGlobals();
   const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = useBasket();
-  const[signupOpen, setSignupOpen] = useState<boolean>(false);
-  const[loginOpen, setLoginOpen] = useState<boolean>(false);
+  const[signupOpen, setSignupOpen] = useState<boolean>(false); // by default SignUp hidden turadi false qilsak
+  const[loginOpen, setLoginOpen] = useState<boolean>(false); //by default Login hidden turadi false qilsak
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   
   /**       HANDLERS    **/
   
-  const handleSignupClose = () => setSignupOpen(false);
+  const handleSignupClose = () => setSignupOpen(false); // false korinishga otishni talab qlyapmiz
   const handleLoginClose = () => setLoginOpen(false);
 
   const handleLogoutClick = (e: React.MouseEvent<HTMLElement>) => {

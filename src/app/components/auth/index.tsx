@@ -37,15 +37,16 @@ const ModalImg = styled.img`
 `;
 
 interface AuthenticationModalProps {
-  signupOpen: boolean;
-  loginOpen: boolean;
-  handleSignupClose: () => void;
-  handleLoginClose: () => void;
+  signupOpen: boolean;   // property state
+  loginOpen: boolean;    // property state
+  handleSignupClose: () => void;   // function
+  handleLoginClose: () => void;    // function
 }
 
 export default function AuthenticationModal(props: AuthenticationModalProps) {
   const { signupOpen, loginOpen, handleSignupClose, handleLoginClose } = props;
   const classes = useStyles();
+
   const [memberNick, setMemberNick] = useState<string>("");
   const [memberPhone, setMemberPhone] = useState<string>("");
   const [memberPassword, setMemberPassword] = useState<string>("");
@@ -57,14 +58,14 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
 
   const handleUsername = (e: T) => {
     setMemberNick(e.target.value); 
-    // primitive variables value ozgarsa set menu qiymatini ozgartiradi
+    // primitive variables value ozgarsa set menu qiymatini ozgartiradi  
   };
 
   const handlePhone = (e: T) => {
-    setMemberPhone(e.target.value); 
+    setMemberPhone(e.target.value);  // target - bu attribute
   };
   const handlePassword = (e: T) => {
-    setMemberPassword(e.target.value); 
+    setMemberPassword(e.target.value);  // target - bu attribute
   };
 
     const handlePasswordKeyDown = (e: T) => {
@@ -78,6 +79,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
 
   const handleSignupRequest = async () => {
     try {
+      console.log("inputs: ", memberNick, memberPhone, memberPassword);
       const isFulfill = 
       memberNick !== "" && memberPhone !== "" && memberPassword !== "";
       if(!isFulfill) throw new Error(Messages.error3);
@@ -88,7 +90,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
         memberPassword: memberPassword,
       };
 
-      const member = new MemberService();
+      const member = new MemberService(); // memberService OBJECT hosil qildik
       const result = await member.signup(signupInput);
 
       // Saving Authenticated user
@@ -180,7 +182,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
                 sx={{ marginTop: "30px", width: "120px" }}
                 variant="extended"
                 color="primary"
-                onChange={handleSignupRequest}
+                onClick={handleSignupRequest}
               >
                 <LoginIcon sx={{ mr: 1 }} />
                 Signup

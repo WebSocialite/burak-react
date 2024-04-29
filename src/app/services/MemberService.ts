@@ -45,7 +45,7 @@ class MemberService {
 
           const member: Member = result.data.member;
           console.log("member: ", member);
-          localStorage.setItem("memberData", JSON.stringify(member));
+          localStorage.setItem("memberData", JSON.stringify(member));// auth bulgan userni memberDATA deb saqlashni buyurdik
 
           return member;
         } catch (err) {
@@ -72,10 +72,10 @@ class MemberService {
     }
     public async logout (): Promise<boolean> { 
         try {
-            const url = this.path + "/member/login";
+            const url = this.path + "/member/logout";
           const result = await axios.post(url, {}, {withCredentials: true });// backend frontend ga cookieni joylaydi
           console.log("logout:", result);
-          localStorage.removeItemem("memberData");
+          localStorage.removeItem("memberData");
 
           return result.data.logout;
         } catch (err) {
