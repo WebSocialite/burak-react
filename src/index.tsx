@@ -9,6 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom";
 import './css/index.css';
+import ContextProvider from './app/context/ContextProvider';
 
 const container = document.getElementById('root')!;//second argument   REAL DOM
 const root = createRoot(container);
@@ -16,6 +17,7 @@ const root = createRoot(container);
 root.render(               // first argument  VIRTUAL DOM
   <React.StrictMode>
     <Provider store={store}>  
+    <ContextProvider>
     <ThemeProvider theme={theme}> 
     <CssBaseline />      
     <Router>
@@ -23,6 +25,7 @@ root.render(               // first argument  VIRTUAL DOM
     </Router>
       
       </ThemeProvider>
+      </ContextProvider>
     </Provider>
   </React.StrictMode>  
 );

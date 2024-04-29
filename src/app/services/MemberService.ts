@@ -40,7 +40,7 @@ class MemberService {
     public async signup(input: MemberInput): Promise<Member> { 
         try {
             const url = this.path + "/member/signup";
-          const result = await axios.post(url, input, {withCredentials: true });
+          const result = await axios.post(url, input, {withCredentials: true }); // backend frontend ga cookieni joylaydi
           console.log("signup:", result);
 
           const member: Member = result.data.member;
@@ -57,7 +57,7 @@ class MemberService {
     public async login(input: LoginInput): Promise<Member> { 
         try {
             const url = this.path + "/member/login";
-          const result = await axios.post(url, input, {withCredentials: true });
+          const result = await axios.post(url, input, {withCredentials: true });// backend frontend ga cookieni joylaydi
           console.log("login:", result);
 
           const member: Member = result.data.member;
@@ -67,6 +67,19 @@ class MemberService {
           return member;
         } catch (err) {
             console.log("Error: login", err);
+            throw err;
+        }
+    }
+    public async logout (): Promise<boolean> { 
+        try {
+            const url = this.path + "/member/login";
+          const result = await axios.post(url, {}, {withCredentials: true });// backend frontend ga cookieni joylaydi
+          console.log("logout:", result);
+          localStorage.removeItemem("memberData");
+
+          return result.data.logout;
+        } catch (err) {
+            console.log("Error: logout:", err);
             throw err;
         }
     }
