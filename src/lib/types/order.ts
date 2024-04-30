@@ -30,7 +30,7 @@ export interface Order {
     productData: Product[];
 }
 
-export interface OrderInquiry {
+export interface OrderInquiry{
     page: number;
     limit: number;
     orderStatus: OrderStatus
