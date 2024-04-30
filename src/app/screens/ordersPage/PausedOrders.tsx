@@ -15,6 +15,8 @@ const pausedOrdersRetriever = createSelector( // SELECTOR
   );
 
 
+  /** HANDLERS **/
+
 export default function PausedOrders() {
     const { pausedOrders } = useSelector(pausedOrdersRetriever);
     return (
@@ -39,7 +41,7 @@ export default function PausedOrders() {
                                     <Box className={"price-box"}>
                                         <p>${item.itemPrice}</p>
                                         <img src={"/icons/close.svg"} />
-                                        <p>${item.itemQuantity}</p>
+                                        <p>{item.itemQuantity}</p>
                                         <img src={"/icons/pause.svg"} />
                                         <p style={{ marginLeft: "15px"}}>
                                             ${item.itemQuantity * item.itemPrice}</p>
