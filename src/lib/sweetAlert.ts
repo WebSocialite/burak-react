@@ -17,7 +17,7 @@ export const sweetTopSuccessAlert = async (
   duration: number = 2000
 ) => {
   await Swal.fire({
-    position: "top-end",
+    position: "center",
     icon: "success",
     title: msg,
     showConfirmButton: false,
