@@ -40,7 +40,7 @@ class OrderService {
             const url = `${this.path}/order/all`;
             const query = `?page=${input.page}&limit=${input.limit}&orderStatus=${input.orderStatus}`;
 
-            const result = await axios.get(url + query, { withCredentials: true});
+            const result = await axios.get(url + query, {});
             console.log('getMyOrder:', result);
 
             return result.data;
@@ -53,7 +53,7 @@ class OrderService {
     public async updateOrder(input: OrderUpdateInput): Promise<Order[]> {     // !!! OrderInquir with [] or not
         try {
             const url = `${this.path}/order/update`;
-            const result = await axios.post(url + input, { withCredentials: true});
+            const result = await axios.post(url, input, { withCredentials: true});
             console.log("updateOrder:", result);
 
             return result.data;

@@ -1,6 +1,7 @@
 import axios from "axios";  
 import { serverApi } from "../../lib/config";
 import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../../lib/types/member";
+import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../../lib/types/member";
 
 class MemberService {
     private readonly path: string;
@@ -108,7 +109,7 @@ class MemberService {
             return member;
             localStorage.setItem("memberData", JSON.stringify(member));
         } catch (err) {
-            console.log("Error: siupdateMembergnup", err);
+            console.log("Error: updateMember", err);
             throw err;
         }
     }
