@@ -1,7 +1,6 @@
 import axios from "axios";  
 import { serverApi } from "../../lib/config";
 import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../../lib/types/member";
-import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../../lib/types/member";
 
 class MemberService {
     private readonly path: string;
